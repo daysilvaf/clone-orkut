@@ -1,1 +1,1 @@
-# clone-orkut
+Criação do clone da rede social Orkut.
