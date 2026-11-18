@@ -1,188 +1,200 @@
 *{
-  margin:0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  outline: 0;
 }
 
 body{
   background-color: #D4DDEE;
-  font-family: Verdana,Arial,sans-serif
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  color: #222;
 }
 
+/* Bloco central estreito, como no Orkut antigo */
 .tela{
-  width: 98%;
-  margin:0 auto;
+  width: calc(100% - 20px);
+  max-width: 780px;
+  margin: 0 auto;
 }
 
+/*! CABEÇALHO ----------------------------*/
 header #cabecalho{
+  margin-top: 10px;
+  padding: 6px 10px;
   background-color: #FCFDDE;
-  padding: 10px 10px;
-
-  border-radius: 8px;
-  border: 5px solid white;
+  border: 1px solid #E6E3A8;
+  border-radius: 4px;
+  font-size: 11px;
 }
 
-div#cabecalho.tela span{
+#cabecalho span{
   font-weight: bold;
-  color: rgba(201, 3, 3, 0.788);
+  color: #C90303;
 }
 
-
-
-header div#cabecalho{
-  margin-top:10px
-}
-
+/*! CONTEÚDO PRINCIPAL ----------------------------*/
 #container-principal{
   display: flex;
+  align-items: flex-start;
+  gap: 10px;
   margin-top: 10px;
 }
 
-/*! LADO ESQUERDO BEGIN----------------------------*/
+/*! LADO ESQUERDO ----------------------------*/
 #caixa-esquerda{
-  height: 400px;
-  width: 60%;
-
-  background-color: #ffffff;
-
-  display: flex;
-  flex-direction:column;
-  align-items: center;
-  justify-content: center;
-}
-
-#caixa-esquerda #bloco-textos{
-  margin-top: 20px;
-  text-align: center;
-}
-
-#caixa-esquerda #bloco-textos span{
-  color: #ED2590;
-  font-weight: bolder;
-}
-
-/*! LADO ESQUERDO END----------------------------*/
-
-#caixa-direita{
-
-  width: 40%;
-  margin-left: 15px;
+  flex: 1;
+  padding: 30px 20px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
-}
-
-
-#caixa-direita #tela-login{
-  height: 60%;
-  width: 100%;
-
-  background-color: #E8EEFA;
-  border: 5px solid white;
-
-  display: flex;
-  flex-direction:column;
-  justify-content: flex-start;
   align-items: center;
-
-  padding: 5px 0px;
 }
 
-div#tela-login p{
-  margin-top: 10px;
+#bloco-logo img{
+  display: block;
+  width: 200px;
+  height: auto;
 }
-div#tela-login form{
+
+#bloco-textos{
   margin-top: 20px;
-  width: 90%;
-}
-
-div#tela-login form input{
-  border: 1px solid grey;
-  border-radius: 2px;
-  height: 30px;
-  width: 80%;
-
-  padding-left: 17px;
-}
-
-div#input-email,div#input-senha{
-  margin-top: 10px;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: row;
-}
-
-div#input-lembrar label{
-  font-size: 12px;
-  color: #3d3d3d;
-}
-
-div#input-lembrar input[type=checkbox]{
-  margin-top:10px;
-  
-  height: 10px;
-  width: 20px;
-
-  margin-left: 30%;
-}
-
-div#input-email label::after, div#input-senha label::after{
-  content: '';
-  margin-right: 10px;
-}
-
-div#tela-login form div#logar{
-  margin-top: 10px;
-  margin-left: 13%;
-  
-  width: 80%;
-
-  display: flex;
-  flex-direction:row;
-  justify-content: center;
-}
-
-
-div#tela-login form div#logar button{
-  height: 30px;
-  width: 100%;
   text-align: center;
-  border: 1px solid rgb(119, 119, 119);
+  line-height: 1.7;
 }
 
-
-
-
-#caixa-direita #tela-inscrever-se{
-  margin-top: 10px;
-  border: 5px solid white;
-
-  background-color: #E8EEFA;
-  height: 40%;
-  width: 100%;
+#bloco-textos span{
+  color: #ED2590;
+  font-weight: bold;
 }
 
-/*Caixa de inscrever-se*/
-#tela-inscrever-se{
+/*! LADO DIREITO ----------------------------*/
+#caixa-direita{
+  width: 260px;
+  flex-shrink: 0;
   display: flex;
-  flex-direction:column;
-  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#tela-login,
+#tela-inscrever-se{
+  background-color: #E8EEFA;
+  border: 1px solid #BCCDE9;
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+
+#tela-login > p{
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+#tela-login form > div{
+  margin-top: 8px;
+}
+
+#input-email,
+#input-senha{
+  display: flex;
   align-items: center;
+}
+
+#input-email label,
+#input-senha label{
+  width: 50px;
+  text-align: right;
+  margin-right: 6px;
+}
+
+#input-email input,
+#input-senha input{
+  flex: 1;
+  min-width: 0;
+  height: 22px;
+  padding: 0 5px;
+  font: inherit;
+  font-size: 11px;
+  border: 1px solid #A5B6D6;
+  border-radius: 2px;
+}
+
+#input-email input:focus,
+#input-senha input:focus{
+  outline: 1px solid #6B8DC9;
+}
+
+#input-lembrar{
+  display: flex;
+  align-items: center;
+  padding-left: 56px;
+  font-size: 11px;
+  color: #3D3D3D;
+}
+
+#input-lembrar input{
+  margin-right: 4px;
+}
+
+#logar{
+  padding-left: 56px;
+}
+
+#logar button{
+  padding: 3px 14px;
+  font: inherit;
+  font-size: 11px;
+  background-color: #F4F4F4;
+  border: 1px solid #8A9BBC;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+#logar button:hover{
+  background-color: #FFFFFF;
+}
+
+/* Caixa de inscrever-se */
+#tela-inscrever-se{
+  text-align: center;
 }
 
 #tela-inscrever-se a{
-  font-size:50px;
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #0047BE;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
-footer#rodape{
-  margin-top:10px;
-  padding: 15px 10px;
-  background-color: #BCCDE9;
+#tela-inscrever-se a:hover{
+  text-decoration: underline;
+}
 
-  display: flex;
-  justify-content: center;
+/*! RODAPÉ ----------------------------*/
+footer#rodape{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  background-color: #BCCDE9;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 11px;
+  color: #3D4E70;
+}
+
+/*! CELULAR ----------------------------*/
+@media (max-width: 600px){
+  #container-principal{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #caixa-direita{
+    width: 100%;
+  }
 }
