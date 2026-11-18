@@ -36,7 +36,6 @@ header #cabecalho{
 /*! CONTEÚDO PRINCIPAL ----------------------------*/
 #container-principal{
   display: flex;
-  align-items: flex-start;
   gap: 10px;
   margin-top: 10px;
 }
@@ -44,25 +43,28 @@ header #cabecalho{
 /*! LADO ESQUERDO ----------------------------*/
 #caixa-esquerda{
   flex: 1;
-  padding: 30px 20px;
+  padding: 30px 16px;
   background-color: #FFFFFF;
+  border: 1px solid #C5D2EA;
   border-radius: 6px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 #bloco-logo img{
   display: block;
-  width: 200px;
+  width: 210px;
   height: auto;
 }
 
 #bloco-textos{
-  margin-top: 20px;
+  margin-top: 22px;
   text-align: center;
-  line-height: 1.7;
+  font-size: 11px;
+  line-height: 1.9;
 }
 
 #bloco-textos span{
@@ -72,7 +74,7 @@ header #cabecalho{
 
 /*! LADO DIREITO ----------------------------*/
 #caixa-direita{
-  width: 260px;
+  width: 270px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -84,12 +86,20 @@ header #cabecalho{
   background-color: #E8EEFA;
   border: 1px solid #BCCDE9;
   border-radius: 6px;
-  padding: 12px 14px;
+  overflow: hidden;
 }
 
+/* Faixa de título da caixa de login */
 #tela-login > p{
+  padding: 7px 12px;
+  background-color: #C9D7EF;
+  border-bottom: 1px solid #BCCDE9;
   text-align: center;
-  margin-bottom: 12px;
+  color: #2B3F66;
+}
+
+#tela-login form{
+  padding: 6px 14px 14px;
 }
 
 #tela-login form > div{
@@ -105,6 +115,7 @@ header #cabecalho{
 #input-email label,
 #input-senha label{
   width: 50px;
+  flex-shrink: 0;
   text-align: right;
   margin-right: 6px;
 }
@@ -113,17 +124,20 @@ header #cabecalho{
 #input-senha input{
   flex: 1;
   min-width: 0;
-  height: 22px;
-  padding: 0 5px;
+  height: 24px;
+  padding: 0 6px;
   font: inherit;
   font-size: 11px;
+  background-color: #FFFFFF;
   border: 1px solid #A5B6D6;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 #input-email input:focus,
 #input-senha input:focus{
-  outline: 1px solid #6B8DC9;
+  outline: none;
+  border-color: #6B8DC9;
+  box-shadow: 0 0 0 2px rgba(107, 141, 201, 0.25);
 }
 
 #input-lembrar{
@@ -135,7 +149,7 @@ header #cabecalho{
 }
 
 #input-lembrar input{
-  margin-right: 4px;
+  margin-right: 5px;
 }
 
 #logar{
@@ -143,21 +157,24 @@ header #cabecalho{
 }
 
 #logar button{
-  padding: 3px 14px;
+  padding: 4px 18px;
   font: inherit;
   font-size: 11px;
-  background-color: #F4F4F4;
+  font-weight: bold;
+  color: #2B3F66;
+  background: linear-gradient(#FFFFFF, #DDE6F6);
   border: 1px solid #8A9BBC;
-  border-radius: 2px;
+  border-radius: 3px;
   cursor: pointer;
 }
 
 #logar button:hover{
-  background-color: #FFFFFF;
+  background: #FFFFFF;
 }
 
 /* Caixa de inscrever-se */
 #tela-inscrever-se{
+  padding: 12px 14px;
   text-align: center;
 }
 
@@ -187,14 +204,136 @@ footer#rodape{
   color: #3D4E70;
 }
 
-/*! CELULAR ----------------------------*/
+/*! CELULAR ----------------------------
+   Ordem pensada para o celular: logo, login, cadastro e,
+   por último, as frases de apresentação. */
 @media (max-width: 600px){
+  body{
+    font-size: 14px;
+  }
+
   #container-principal{
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* A caixa da esquerda "some" para que o logo e as frases
+     possam ser reordenados junto com o login */
+  #caixa-esquerda{
+    display: contents;
+  }
+
+  #bloco-logo{
+    order: 1;
+    padding: 8px 0 2px;
+    align-self: center;
+  }
+
+  #bloco-logo img{
+    width: 150px;
+  }
+
+  #caixa-direita{
+    order: 2;
+    width: 100%;
+    gap: 12px;
+  }
+
+  #bloco-textos{
+    order: 3;
+    margin-top: 0;
+    padding: 14px 16px;
+    background-color: #FFFFFF;
+    border: 1px solid #C5D2EA;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  #bloco-textos p + p{
+    margin-top: 8px;
+  }
+
+  #tela-login,
+  #tela-inscrever-se{
+    border-radius: 8px;
+  }
+
+  #tela-login > p{
+    padding: 10px 14px;
+  }
+
+  #tela-login form{
+    padding: 4px 16px 16px;
+  }
+
+  #tela-login form > div{
+    margin-top: 12px;
+  }
+
+  /* Rótulo em cima do campo e campos maiores para o toque */
+  #input-email,
+  #input-senha{
     flex-direction: column;
     align-items: stretch;
   }
 
-  #caixa-direita{
+  #input-email label,
+  #input-senha label{
+    width: auto;
+    text-align: left;
+    margin: 0 0 4px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #2B3F66;
+  }
+
+  #input-email input,
+  #input-senha input{
+    flex: none;
+    height: 42px;
+    padding: 0 10px;
+    font-size: 16px; /* evita o zoom automático no iPhone */
+    border-radius: 6px;
+  }
+
+  #input-lembrar{
+    padding-left: 0;
+    font-size: 13px;
+  }
+
+  #input-lembrar input{
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+  }
+
+  #logar{
+    padding-left: 0;
+  }
+
+  #logar button{
     width: 100%;
+    height: 44px;
+    font-size: 15px;
+    border-radius: 6px;
+  }
+
+  #tela-inscrever-se{
+    padding: 14px 16px;
+  }
+
+  #tela-inscrever-se a{
+    margin-top: 6px;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #A5B6D6;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+  }
+
+  footer#rodape{
+    margin-top: 12px;
+    font-size: 11px;
   }
 }
