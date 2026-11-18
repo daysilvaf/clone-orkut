@@ -192,6 +192,52 @@ header #cabecalho{
   text-decoration: underline;
 }
 
+/*! ATALHOS PARA AS TELAS ----------------------------*/
+#telas-projeto{
+  background-color: #FFFFFF;
+  border: 1px solid #BCCDE9;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+#telas-projeto p{
+  padding: 6px 12px;
+  background-color: #C9D7EF;
+  border-bottom: 1px solid #BCCDE9;
+  text-align: center;
+  font-weight: bold;
+  color: #2B3F66;
+}
+
+#telas-projeto ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px;
+  list-style: none;
+}
+
+#telas-projeto li{
+  flex: 1 1 calc(50% - 6px);
+}
+
+#telas-projeto a{
+  display: block;
+  padding: 6px 8px;
+  background-color: #E8EEFA;
+  border: 1px solid #BCCDE9;
+  border-radius: 4px;
+  font-size: 11px;
+  color: #0047BE;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+#telas-projeto a:hover{
+  background-color: #D9E3F6;
+  text-decoration: underline;
+}
+
 /*! RODAPÉ ----------------------------*/
 footer#rodape{
   margin-top: 10px;
@@ -329,6 +375,16 @@ footer#rodape{
     font-size: 15px;
     border: 1px solid #A5B6D6;
     border-radius: 6px;
+    background-color: #FFFFFF;
+  }
+
+  #telas-projeto{
+    border-radius: 8px;
+  }
+
+  #telas-projeto a{
+    padding: 10px;
+    font-size: 14px;
     background-color: #FFFFFF;
   }
 

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Depoimentos de Dayane Ferreira - Orkut Clone</title>
+  <!-- perfil.css traz a base (barra, caixas, colunas); depoimentos.css só o que é desta página -->
+  <link rel="stylesheet" href="css/perfil.css">
+  <link rel="stylesheet" href="css/depoimentos.css">
+  <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR (igual à do perfil, com o e-mail) -->
+  <header id="barra-topo">
+    <div class="tela barra-conteudo">
+      <a href="perfil.html" id="logo-topo"><img src="img/orkut-logo.png" alt="logo orkut"></a>
+
+      <nav id="menu-topo">
+        <a href="perfil.html">Início</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="depoimentos.html">Depoimentos</a>
+        <a href="comunidade.html">Comunidades</a>
+        <a href="humor.html">Bonequinho</a>
+      </nav>
+
+      <div id="busca-topo">
+        <!-- e-mail fictício: o repositório é público -->
+        <span id="email-topo">dayane@orkut.clone</span>
+        <a href="index.html" id="sair">Sair</a>
+        <input type="search" placeholder="pesquisa do orkut" aria-label="pesquisa do orkut">
+      </div>
+    </div>
+  </header>
+
+  <div id="pagina-perfil" class="tela">
+
+    <!-- COLUNA ESQUERDA: a mesma do perfil, com "depoimentos" marcado -->
+    <aside id="coluna-esquerda" class="caixa">
+      <div id="foto-perfil" aria-hidden="true">DF</div>
+
+      <div id="resumo-perfil">
+        <a href="perfil.html" class="nome-link">Dayane Ferreira</a>
+        <p>feminino, solteira<br>São Paulo, Brasil</p>
+      </div>
+
+      <ul id="menu-perfil">
+        <li><a href="perfil.html"><span class="icone">👤</span>perfil</a></li>
+        <li><a href="#"><span class="icone">📝</span>recados</a></li>
+        <li><a href="#"><span class="icone">📷</span>fotos</a></li>
+        <li><a href="#"><span class="icone">🎬</span>vídeos</a></li>
+        <li><a href="depoimentos.html" class="ativo"><span class="icone">⭐</span>depoimentos</a></li>
+      </ul>
+
+      <div class="titulo-apps"><h2>Apps</h2><a href="#">editar</a></div>
+      <ul class="lista-apps">
+        <li><a href="humor.html"><span class="icone">🧸</span>Bonequinho</a></li>
+        <li><a href="#"><span class="icone">➕</span>adicionar apps</a></li>
+      </ul>
+    </aside>
+
+    <!-- CENTRO: cabeçalho do perfil + lista de depoimentos -->
+    <div id="coluna-meio">
+
+      <main id="coluna-centro" class="caixa">
+        <div class="cabecalho-linha">
+          <h1>Dayane Ferreira</h1>
+          <a href="perfil.html" class="botao-mini">editar</a>
+        </div>
+        <p id="trilha"><a href="perfil.html">Início</a> &gt; <a href="perfil.html">Meu perfil</a> &gt; depoimentos</p>
+
+        <div id="quem-ve">
+          <label for="visao">Quem vê meu perfil assim?</label>
+          <select id="visao">
+            <option>só eu</option>
+            <option>meus amigos</option>
+            <option>todos</option>
+          </select>
+        </div>
+
+        <ul id="contadores">
+          <li><span>recados</span><strong>📝 128</strong></li>
+          <li><span>fotos</span><strong>📷 42</strong></li>
+          <li><span>vídeos</span><strong>🎬 7</strong></li>
+          <li><span>fãs</span><strong>⭐ 23</strong></li>
+          <li><span>confiável</span><strong class="notas">😊😊😊</strong></li>
+          <li><span>legal</span><strong class="notas">🧊🧊🧊</strong></li>
+          <li><span>sexy</span><strong class="notas">💗💗</strong></li>
+        </ul>
+
+        <!-- Dados resumidos (o perfil completo fica em perfil.html) -->
+        <dl id="tabela-social" class="resumo">
+          <div><dt>quem sou eu:</dt><dd>Desenvolvedora em formação, apaixonada por HTML e CSS. Nas horas vagas leio, cozinho e cuido das minhas plantas.</dd></div>
+          <div><dt>aniversário:</dt><dd>12 de abril</dd></div>
+          <div><dt>humor:</dt><dd>alegre e curiosa</dd></div>
+          <div><dt>local:</dt><dd>São Paulo, Brasil</dd></div>
+        </dl>
+        <a href="perfil.html" class="ver-perfil">ver perfil inteiro »</a>
+      </main>
+
+      <section id="meus-depoimentos" class="caixa">
+        <div class="cabecalho-linha">
+          <h2>▾ meus depoimentos <span>(6)</span></h2>
+          <a href="#" class="botao-mini">escrever depoimento</a>
+        </div>
+
+        <ul class="lista-depoimentos">
+          <li class="depoimento">
+            <a href="#" class="foto-amigo c1" aria-hidden="true">AL</a>
+            <div class="texto">
+              <a href="#" class="autor">Ana Luiza</a>
+              <p>Day, você é aquela amiga que sempre tem um café pronto e um conselho na manga. Obrigada por todas as risadas desde a escola! Te adoro 💕</p>
+            </div>
+          </li>
+          <li class="depoimento">
+            <a href="#" class="foto-amigo c2" aria-hidden="true">BR</a>
+            <div class="texto">
+              <a href="#" class="autor">Bruno</a>
+              <p>Me ajudou a arrumar o CSS do meu site às duas da manhã e ainda explicou flexbox com desenho. Paciência de professora! Valeu demais.</p>
+            </div>
+          </li>
+          <li class="depoimento">
+            <a href="#" class="foto-amigo c3" aria-hidden="true">CA</a>
+            <div class="texto">
+              <a href="#" class="autor">Camila</a>
+              <p>Melhor companhia para maratonar animação e comer brigadeiro de panela. A Pipoca que me perdoe, mas a dona é ainda mais fofa 🐱</p>
+            </div>
+          </li>
+          <li class="depoimento">
+            <a href="#" class="foto-amigo c5" aria-hidden="true">FE</a>
+            <div class="texto">
+              <a href="#" class="autor">Fernanda</a>
+              <p>Pessoa mais organizada que eu conheço: tem planilha até para regar as plantas 🌱 Sorte de quem tem você por perto. Beijos!</p>
+            </div>
+          </li>
+          <li class="depoimento">
+            <a href="#" class="foto-amigo c7" aria-hidden="true">JU</a>
+            <div class="texto">
+              <a href="#" class="autor">Juliana</a>
+              <p>Amiga, seu pão de queijo é o melhor de São Paulo e eu não aceito discussão. Obrigada por estar sempre presente, nos dias bons e nos difíceis.</p>
+            </div>
+          </li>
+          <li class="depoimento">
+            <a href="#" class="foto-amigo c9" aria-hidden="true">PA</a>
+            <div class="texto">
+              <a href="#" class="autor">Patrícia</a>
+              <p>Do yoga às 7h ao café às 7h05: parceira para tudo! Curiosa, alegre e sempre aprendendo algo novo. Orgulho de você ⭐</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- COLUNA DIREITA: amigos (com busca) e comunidades, sem publicidade -->
+    <aside id="coluna-direita">
+      <section class="caixa bloco-lateral">
+        <h2>meus amigos <span>(48)</span></h2>
+        <input type="search" class="busca-amigos" placeholder="buscar amigos" aria-label="buscar amigos">
+        <ul class="grade">
+          <li><a href="#"><span class="mini c1">AL</span>Ana Luiza (212)</a></li>
+          <li><a href="#"><span class="mini c2">BR</span>Bruno (98)</a></li>
+          <li><a href="#"><span class="mini c3">CA</span>Camila (305)</a></li>
+          <li><a href="#"><span class="mini c4">DI</span>Diego (147)</a></li>
+          <li><a href="#"><span class="mini c5">FE</span>Fernanda (260)</a></li>
+          <li><a href="#"><span class="mini c6">GU</span>Gustavo (73)</a></li>
+          <li><a href="#"><span class="mini c7">JU</span>Juliana (189)</a></li>
+          <li><a href="#"><span class="mini c8">MA</span>Marcos (120)</a></li>
+          <li><a href="#"><span class="mini c9">PA</span>Patrícia (231)</a></li>
+        </ul>
+        <a href="#" class="ver-todos">ver todos</a>
+      </section>
+
+      <section class="caixa bloco-lateral">
+        <h2>comunidades <span>(27)</span></h2>
+        <ul class="grade">
+          <li><a href="comunidade.html"><span class="mini c3">☕</span>Eu amo café (5.402)</a></li>
+          <li><a href="#"><span class="mini c6">&lt;/&gt;</span>Aprendendo CSS (1.287)</a></li>
+          <li><a href="#"><span class="mini c1">🐱</span>Gatos são vida (9.815)</a></li>
+          <li><a href="#"><span class="mini c4">🌱</span>Plantas em casa (2.033)</a></li>
+          <li><a href="#"><span class="mini c8">📚</span>Leitura sem fim (3.640)</a></li>
+          <li><a href="#"><span class="mini c5">🧀</span>Pão de queijo (7.120)</a></li>
+        </ul>
+        <a href="comunidade.html" class="ver-todos">ver todas</a>
+      </section>
+    </aside>
+
+  </div>
+
+  <footer id="rodape" class="tela">
+    Orkut.clone - 2023 | Desenvolvido por Dayane Ferreira
+  </footer>
+
+</body>
+</html>
