@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eu amo café - Orkut Clone</title>
+  <!-- perfil.css traz a base (barra, caixas, 3 colunas); comunidade.css só o que é desta página -->
+  <link rel="stylesheet" href="css/perfil.css">
+  <link rel="stylesheet" href="css/comunidade.css">
+  <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR (igual à do perfil) -->
+  <header id="barra-topo">
+    <div class="tela barra-conteudo">
+      <a href="perfil.html" id="logo-topo"><img src="img/orkut-logo.png" alt="logo orkut"></a>
+
+      <nav id="menu-topo">
+        <a href="perfil.html">Início</a>
+        <a href="#">Recados</a>
+        <a href="#">Amigos</a>
+        <a href="comunidade.html">Comunidades</a>
+      </nav>
+
+      <div id="busca-topo">
+        <input type="search" placeholder="pesquisa do orkut" aria-label="pesquisa do orkut">
+        <a href="index.html" id="sair">Sair</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Usa o mesmo id da página de perfil para aproveitar o layout de 3 colunas -->
+  <div id="pagina-perfil" class="tela">
+
+    <!-- COLUNA ESQUERDA: imagem, nome, membros e ações -->
+    <aside id="coluna-esquerda" class="caixa">
+      <div id="foto-comunidade" aria-hidden="true">☕</div>
+
+      <div id="resumo-comunidade">
+        <a href="comunidade.html" class="nome-link">Eu amo café</a>
+        <p>5.402 membros</p>
+      </div>
+
+      <ul id="menu-perfil">
+        <li><a href="#" class="ativo"><span class="icone">🏠</span>comunidade</a></li>
+        <li><a href="#"><span class="icone">💬</span>fórum</a></li>
+        <li><a href="#"><span class="icone">📊</span>enquetes</a></li>
+        <li><a href="#"><span class="icone">👥</span>membros</a></li>
+      </ul>
+
+      <h2 id="titulo-acoes">ações</h2>
+      <ul id="acoes">
+        <li><a href="#">participar da comunidade</a></li>
+        <li><a href="#">denunciar abuso</a></li>
+      </ul>
+    </aside>
+
+    <!-- CENTRO: título, botão, dados e descrição -->
+    <main id="coluna-centro" class="caixa">
+      <div id="cabecalho-comunidade">
+        <h1>Eu amo café</h1>
+        <a href="#" class="botao">＋ participar da comunidade</a>
+      </div>
+
+      <div id="aviso">
+        <strong>Comunidade aberta</strong>
+        <p>Qualquer pessoa pode ler os tópicos. <a href="#">Participe desta comunidade</a> para criar tópicos e enquetes.</p>
+      </div>
+
+      <dl id="dados-comunidade">
+        <div><dt>idioma:</dt><dd>Português (Brasil)</dd></div>
+        <div><dt>criada em:</dt><dd>14/03/2005</dd></div>
+        <div><dt>categoria:</dt><dd>Culinária, bebidas e vinhos</dd></div>
+        <div><dt>local:</dt><dd>São Paulo, SP, Brasil</dd></div>
+        <div><dt>tipo:</dt><dd>pública</dd></div>
+        <div><dt>dono:</dt><dd><a href="perfil.html">Dayane Ferreira</a></dd></div>
+        <div><dt>visível por:</dt><dd>todos</dd></div>
+        <div><dt>moderadores:</dt><dd><a href="#">Ana Luiza</a>, <a href="#">Bruno</a>, <a href="#">Juliana</a></dd></div>
+      </dl>
+
+      <div id="descricao">
+        <p>Comunidade para quem não começa o dia sem uma xícara de café. ☕</p>
+        <p>Aqui a gente troca receitas, dicas de grãos, métodos de preparo (coado, prensa francesa, moka...) e, claro, fala da vida enquanto o café esfria.</p>
+        <p class="destaque">Respeito acima de tudo. Sem spam e sem propaganda!</p>
+        <p>Participe também do tópico <a href="#">"Qual seu café favorito?"</a> no fórum.</p>
+      </div>
+
+      <div id="rodape-centro">
+        <a href="#" class="botao">↗ compartilhar</a>
+      </div>
+    </main>
+
+    <!-- COLUNA DIREITA: comunidades relacionadas -->
+    <aside id="coluna-direita">
+      <section class="caixa bloco-lateral">
+        <h2>comunidades relacionadas</h2>
+        <ul class="grade">
+          <li><a href="#"><span class="mini c5">🥐</span>Café da manhã é sagrado (3.218)</a></li>
+          <li><a href="#"><span class="mini c3">🍫</span>Chocolate quente no inverno (2.904)</a></li>
+          <li><a href="#"><span class="mini c1">🍰</span>Bolo de cenoura (4.771)</a></li>
+          <li><a href="#"><span class="mini c4">🍵</span>Chá também vale (1.356)</a></li>
+          <li><a href="#"><span class="mini c8">📚</span>Leitura sem fim (3.640)</a></li>
+          <li><a href="#"><span class="mini c7">😴</span>Só acordo depois do café (6.012)</a></li>
+          <li><a href="#"><span class="mini c6">&lt;/&gt;</span>Aprendendo CSS (1.287)</a></li>
+          <li><a href="#"><span class="mini c2">🧀</span>Pão de queijo (7.120)</a></li>
+          <li><a href="#"><span class="mini c9">🫖</span>Coleciono xícaras (845)</a></li>
+        </ul>
+        <a href="#" class="ver-todos">ver todas</a>
+      </section>
+    </aside>
+
+  </div>
+
+  <footer id="rodape" class="tela">
+    Orkut.clone - 2023 | Desenvolvido por Dayane Ferreira
+  </footer>
+
+</body>
+</html>
