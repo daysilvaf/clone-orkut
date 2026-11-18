@@ -1,0 +1,362 @@
+/* Página do app Bonequinho (humor): usa a base de perfil.css */
+
+/*! BARRA SUPERIOR: e-mail ----------------------------*/
+#email-topo{
+  color: #FFFFFF;
+  font-size: 11px;
+  opacity: .9;
+}
+
+/*! COLUNA ESQUERDA: status ----------------------------*/
+#status-online{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #333 !important;
+}
+
+.bolinha{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #3CB54A;
+}
+
+/*! CENTRO ----------------------------*/
+#trilha{
+  margin-top: 2px;
+  font-size: 11px;
+  color: #777;
+}
+
+/* Abas do app */
+#abas-app{
+  display: flex;
+  gap: 3px;
+  margin-top: 12px;
+  border-bottom: 2px solid #A8C0E6;
+  overflow-x: auto;
+}
+
+#abas-app a{
+  padding: 4px 10px;
+  border: 1px solid #C5D2EA;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  background: linear-gradient(#FFFFFF, #E8EEFA);
+  color: #333;
+  font-size: 11px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+#abas-app a.ativa{
+  background: #A8C0E6;
+  border-color: #A8C0E6;
+  color: #FFFFFF;
+}
+
+#abas-app a:hover{
+  text-decoration: none;
+}
+
+/* Palco (avatar) + painel lado a lado */
+#app-humor{
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+#palco{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+#boneco{
+  width: 170px;
+  height: auto;
+}
+
+#frase-humor{
+  margin-top: 8px;
+  padding: 4px 12px;
+  background-color: #E8EEFA;
+  border-radius: 12px;
+  font-size: 11px;
+  color: #3D4E70;
+}
+
+#frase-humor span{
+  display: none;
+  font-weight: bold;
+}
+
+#lado-painel{
+  width: 280px;
+  flex-shrink: 0;
+}
+
+#painel-humor{
+  border: 1px solid #C5D2EA;
+  border-radius: 6px;
+  background-color: #F5F8FD;
+  padding: 8px;
+}
+
+#painel-humor legend{
+  padding: 0 4px;
+  font-weight: bold;
+  font-size: 11px;
+  color: #3D4E70;
+}
+
+#categorias{
+  display: flex;
+  gap: 2px;
+}
+
+#categorias span{
+  flex: 1;
+  text-align: center;
+  padding: 3px 0;
+  border: 1px solid #C5D2EA;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  background-color: #E8EEFA;
+  font-size: 13px;
+}
+
+#categorias span.ativa{
+  background-color: #FFFFFF;
+}
+
+/* Lista com rolagem, como no original */
+#lista-humores{
+  height: 190px;
+  overflow-y: auto;
+  border: 1px solid #C5D2EA;
+  background-color: #FFFFFF;
+}
+
+#lista-humores label{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+#lista-humores li:nth-child(odd) label{
+  background-color: #F5F8FD;
+}
+
+#lista-humores label:hover{
+  background-color: #E8EEFA;
+}
+
+#lista-humores label:has(input:checked){
+  background-color: #DDE7F8;
+  font-weight: bold;
+}
+
+#lista-humores input{
+  accent-color: #5B7FC4;
+}
+
+#lista-humores .emoji{
+  width: 16px;
+  text-align: center;
+}
+
+#rotulo-comentario{
+  display: block;
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #3D4E70;
+}
+
+#rotulo-comentario span{
+  font-weight: normal;
+  color: #777;
+}
+
+#comentario{
+  width: 100%;
+  height: 24px;
+  margin-top: 4px;
+  padding: 0 6px;
+  font: inherit;
+  font-size: 11px;
+  border: 1px solid #A9B4C6;
+  border-radius: 3px;
+}
+
+#limite{
+  display: block;
+  margin-top: 2px;
+  text-align: right;
+  font-size: 9px;
+  color: #999;
+}
+
+#rodape-humor{
+  margin-top: 8px;
+  text-align: center;
+}
+
+#rodape-humor .botao{
+  font: inherit;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*! AVATAR: mostra as partes conforme o humor ----------------------------*/
+#boneco .parte,
+#boneco .bracos-cima{
+  display: none;
+}
+
+/* feliz */
+#app-humor:has(#h-feliz:checked) :is(.olhos-normais, .boca-sorriso, .bochechas),
+/* acanhada */
+#app-humor:has(#h-acanhada:checked) :is(.olhos-fechados, .boca-pequena, .bochechas),
+/* apaixonada */
+#app-humor:has(#h-apaixonada:checked) :is(.olhos-coracao, .boca-sorriso, .bochechas, .coracao-flutuando),
+/* com sono */
+#app-humor:has(#h-sonolenta:checked) :is(.olhos-sono, .boca-o, .zzz),
+/* risonha */
+#app-humor:has(#h-risonha:checked) :is(.olhos-fechados, .boca-aberta, .bochechas),
+/* pulando de alegria */
+#app-humor:has(#h-pulando:checked) :is(.olhos-fechados, .boca-aberta, .bochechas, .estrelas),
+/* tristinha */
+#app-humor:has(#h-triste:checked) :is(.olhos-normais, .sobrancelha-triste, .boca-triste, .lagrima),
+/* brava */
+#app-humor:has(#h-brava:checked) :is(.olhos-normais, .sobrancelha-brava, .boca-triste){
+  display: inline;
+}
+
+/* Bonequinha de braços pra cima quando está empolgada */
+#app-humor:has(#h-pulando:checked, #h-risonha:checked, #h-apaixonada:checked) .bracos-cima{ display: inline; }
+#app-humor:has(#h-pulando:checked, #h-risonha:checked, #h-apaixonada:checked) .bracos-baixo{ display: none; }
+
+#app-humor:has(#h-pulando:checked) #boneco{
+  animation: pular .6s ease-in-out infinite alternate;
+}
+
+@keyframes pular{
+  to{ transform: translateY(-12px); }
+}
+
+/* Frase do humor marcado */
+#app-humor:has(#h-feliz:checked) [data-humor="feliz"],
+#app-humor:has(#h-acanhada:checked) [data-humor="acanhada"],
+#app-humor:has(#h-apaixonada:checked) [data-humor="apaixonada"],
+#app-humor:has(#h-sonolenta:checked) [data-humor="sonolenta"],
+#app-humor:has(#h-risonha:checked) [data-humor="risonha"],
+#app-humor:has(#h-pulando:checked) [data-humor="pulando"],
+#app-humor:has(#h-triste:checked) [data-humor="triste"],
+#app-humor:has(#h-brava:checked) [data-humor="brava"]{
+  display: inline;
+}
+
+@media (prefers-reduced-motion: reduce){
+  #app-humor:has(#h-pulando:checked) #boneco{ animation: none; }
+}
+
+/*! TABLET ----------------------------*/
+@media (max-width: 860px){
+  #pagina-perfil{
+    flex-wrap: nowrap;
+  }
+}
+
+/*! CELULAR ----------------------------*/
+@media (max-width: 600px){
+  #email-topo{
+    font-size: 12px;
+  }
+
+  #pagina-perfil{
+    flex-wrap: nowrap;
+  }
+
+  #resumo-perfil p{
+    margin-top: 1px;
+  }
+
+  #abas-app a{
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  #trilha{
+    font-size: 12px;
+  }
+
+  /* Avatar em cima, painel embaixo */
+  #app-humor{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #palco{
+    padding-top: 6px;
+  }
+
+  #boneco{
+    width: 130px;
+  }
+
+  #frase-humor{
+    font-size: 13px;
+  }
+
+  #lado-painel{
+    width: 100%;
+  }
+
+  #painel-humor legend,
+  #rotulo-comentario{
+    font-size: 13px;
+  }
+
+  #categorias span{
+    font-size: 16px;
+    padding: 5px 0;
+  }
+
+  #lista-humores{
+    height: auto;
+  }
+
+  #lista-humores label{
+    padding: 9px 10px;
+    font-size: 14px;
+  }
+
+  #lista-humores .emoji{
+    width: 20px;
+  }
+
+  #comentario{
+    height: 36px;
+    font-size: 14px;
+  }
+
+  #limite{
+    font-size: 11px;
+  }
+
+  #rodape-humor .botao{
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+}

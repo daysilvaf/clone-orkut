@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bonequinho - Orkut Clone</title>
+  <!-- perfil.css traz a base (barra, caixas, colunas); humor.css só o que é desta página -->
+  <link rel="stylesheet" href="css/perfil.css">
+  <link rel="stylesheet" href="css/comunidade.css">
+  <link rel="stylesheet" href="css/humor.css">
+  <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR (igual à do perfil, com o e-mail) -->
+  <header id="barra-topo">
+    <div class="tela barra-conteudo">
+      <a href="perfil.html" id="logo-topo"><img src="img/orkut-logo.png" alt="logo orkut"></a>
+
+      <nav id="menu-topo">
+        <a href="perfil.html">Início</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="#">Recados</a>
+        <a href="#">Amigos</a>
+        <a href="comunidade.html">Comunidades</a>
+      </nav>
+
+      <div id="busca-topo">
+        <!-- e-mail fictício: o repositório é público -->
+        <span id="email-topo">dayane@orkut.clone</span>
+        <a href="index.html" id="sair">Sair</a>
+        <input type="search" placeholder="pesquisa do orkut" aria-label="pesquisa do orkut">
+      </div>
+    </div>
+  </header>
+
+  <div id="pagina-perfil" class="tela">
+
+    <!-- COLUNA ESQUERDA: mesma do perfil + status e Apps -->
+    <aside id="coluna-esquerda" class="caixa">
+      <div id="foto-perfil" aria-hidden="true">DF</div>
+
+      <div id="resumo-perfil">
+        <a href="perfil.html" class="nome-link">Dayane Ferreira</a>
+        <p id="status-online"><span class="bolinha"></span>disponível</p>
+        <p>feminino, solteira<br>São Paulo, Brasil</p>
+      </div>
+
+      <ul id="menu-perfil">
+        <li><a href="perfil.html"><span class="icone">👤</span>perfil</a></li>
+        <li><a href="#"><span class="icone">📝</span>recados</a></li>
+        <li><a href="#"><span class="icone">📷</span>fotos</a></li>
+        <li><a href="#"><span class="icone">🎬</span>vídeos</a></li>
+        <li><a href="#"><span class="icone">⭐</span>depoimentos</a></li>
+      </ul>
+
+      <div class="titulo-apps"><h2>Apps</h2><a href="#">editar</a></div>
+      <ul class="lista-apps">
+        <li><a href="humor.html" class="ativo"><span class="icone">🧸</span>Bonequinho</a></li>
+        <li><a href="#"><span class="icone">➕</span>adicionar apps</a></li>
+      </ul>
+    </aside>
+
+    <!-- CENTRO: o app -->
+    <main id="coluna-centro" class="caixa">
+      <h1>Bonequinho</h1>
+      <p id="trilha"><a href="perfil.html">Início</a> &gt; Bonequinho</p>
+
+      <nav id="abas-app">
+        <a href="#">🧸 Bonequinho</a>
+        <a href="#">👥 Amigos</a>
+        <a href="#" class="ativa">😊 Humor</a>
+        <a href="#">👗 Aparência</a>
+        <a href="#">✏️ Criar</a>
+        <a href="#">🖼️ Imagens</a>
+      </nav>
+
+      <form id="app-humor" action="#">
+
+        <!-- Avatar desenhado em SVG: o rosto muda conforme o humor marcado (CSS :has) -->
+        <div id="palco">
+          <svg id="boneco" viewBox="0 0 120 170" role="img" aria-label="Avatar da Dayane">
+            <!-- sombra -->
+            <ellipse cx="60" cy="163" rx="34" ry="5" fill="#000" opacity=".12"/>
+            <!-- cabelo de trás -->
+            <path d="M26 52 Q24 20 60 16 Q96 20 94 52 L96 92 Q84 98 76 88 L44 88 Q36 98 24 92 Z" fill="#6B3E26"/>
+            <!-- pernas -->
+            <rect x="46" y="128" width="11" height="28" rx="4" fill="#F2C9A4"/>
+            <rect x="63" y="128" width="11" height="28" rx="4" fill="#F2C9A4"/>
+            <rect x="43" y="150" width="16" height="8" rx="4" fill="#5B4A9E"/>
+            <rect x="61" y="150" width="16" height="8" rx="4" fill="#5B4A9E"/>
+            <!-- braços -->
+            <g class="bracos-baixo">
+              <rect x="27" y="92" width="10" height="34" rx="5" fill="#F2C9A4" transform="rotate(12 32 94)"/>
+              <rect x="83" y="92" width="10" height="34" rx="5" fill="#F2C9A4" transform="rotate(-12 88 94)"/>
+            </g>
+            <g class="bracos-cima">
+              <rect x="27" y="62" width="10" height="34" rx="5" fill="#F2C9A4" transform="rotate(-25 32 94)"/>
+              <rect x="83" y="62" width="10" height="34" rx="5" fill="#F2C9A4" transform="rotate(25 88 94)"/>
+            </g>
+            <!-- vestido -->
+            <path d="M42 88 L78 88 L90 134 L30 134 Z" fill="#E78FB3"/>
+            <rect x="42" y="86" width="36" height="8" rx="3" fill="#D46F99"/>
+            <!-- pescoço e cabeça -->
+            <rect x="54" y="76" width="12" height="12" fill="#F2C9A4"/>
+            <circle cx="60" cy="52" r="28" fill="#F8D7B8"/>
+            <!-- franja -->
+            <path d="M32 50 Q34 22 60 22 Q88 22 89 50 Q74 34 58 36 Q44 38 32 50 Z" fill="#7A4730"/>
+
+            <!-- OLHOS -->
+            <g class="parte olhos-normais" fill="#333">
+              <circle cx="50" cy="55" r="3.2"/><circle cx="70" cy="55" r="3.2"/>
+            </g>
+            <g class="parte olhos-fechados" fill="none" stroke="#333" stroke-width="2.2" stroke-linecap="round">
+              <path d="M45 56 Q50 51 55 56"/><path d="M65 56 Q70 51 75 56"/>
+            </g>
+            <g class="parte olhos-coracao" fill="#E0245E">
+              <path d="M50 59 l-4.5 -4.5 a2.6 2.6 0 0 1 4.5 -3 a2.6 2.6 0 0 1 4.5 3 Z"/>
+              <path d="M70 59 l-4.5 -4.5 a2.6 2.6 0 0 1 4.5 -3 a2.6 2.6 0 0 1 4.5 3 Z"/>
+            </g>
+            <g class="parte olhos-sono" fill="none" stroke="#333" stroke-width="2.2" stroke-linecap="round">
+              <path d="M45 55 H55"/><path d="M65 55 H75"/>
+            </g>
+            <g class="parte sobrancelha-brava" fill="none" stroke="#5A3220" stroke-width="2.4" stroke-linecap="round">
+              <path d="M44 47 L55 50"/><path d="M76 47 L65 50"/>
+            </g>
+            <g class="parte sobrancelha-triste" fill="none" stroke="#5A3220" stroke-width="2.2" stroke-linecap="round">
+              <path d="M45 50 L55 47"/><path d="M75 50 L65 47"/>
+            </g>
+
+            <!-- BOCAS -->
+            <path class="parte boca-sorriso" d="M52 66 Q60 73 68 66" fill="none" stroke="#B04A5A" stroke-width="2.2" stroke-linecap="round"/>
+            <path class="parte boca-aberta" d="M50 64 Q60 64 70 64 Q68 76 60 76 Q52 76 50 64 Z" fill="#B04A5A"/>
+            <path class="parte boca-pequena" d="M56 67 Q60 69 64 67" fill="none" stroke="#B04A5A" stroke-width="2" stroke-linecap="round"/>
+            <path class="parte boca-triste" d="M52 70 Q60 63 68 70" fill="none" stroke="#B04A5A" stroke-width="2.2" stroke-linecap="round"/>
+            <ellipse class="parte boca-o" cx="60" cy="68" rx="3.5" ry="4" fill="#B04A5A"/>
+
+            <!-- EXTRAS -->
+            <g class="parte bochechas" fill="#F49AC1" opacity=".7">
+              <ellipse cx="42" cy="63" rx="5" ry="3"/><ellipse cx="78" cy="63" rx="5" ry="3"/>
+            </g>
+            <path class="parte lagrima" d="M72 60 Q75 66 72 68 Q69 66 72 60 Z" fill="#6FB6E8"/>
+            <text class="parte zzz" x="86" y="26" font-size="14" font-family="Verdana" font-weight="bold" fill="#7FA7DB">z z</text>
+            <path class="parte coracao-flutuando" d="M98 30 l-7 -7 a4 4 0 0 1 7 -4.5 a4 4 0 0 1 7 4.5 Z" fill="#E0245E"/>
+            <g class="parte estrelas" fill="#E9B44C">
+              <path d="M14 30 l2 5 5 .5 -4 3 1.5 5 -4.5 -3 -4.5 3 1.5 -5 -4 -3 5 -.5 Z"/>
+              <path d="M102 20 l1.5 4 4 .4 -3 2.4 1 4 -3.5 -2.4 -3.5 2.4 1 -4 -3 -2.4 4 -.4 Z"/>
+            </g>
+          </svg>
+
+          <!-- Frase embaixo do boneco: só a do humor marcado aparece -->
+          <p id="frase-humor">
+            Dayane está
+            <span data-humor="feliz">feliz 😊</span>
+            <span data-humor="acanhada">acanhada 😳</span>
+            <span data-humor="apaixonada">apaixonada ❤️</span>
+            <span data-humor="sonolenta">com sono 😴</span>
+            <span data-humor="risonha">risonha 😄</span>
+            <span data-humor="pulando">pulando de alegria 🎉</span>
+            <span data-humor="triste">tristinha 😢</span>
+            <span data-humor="brava">brava 😠</span>
+          </p>
+        </div>
+
+        <!-- Painel para trocar o humor -->
+        <div id="lado-painel">
+        <fieldset id="painel-humor">
+          <legend>Modifique seu humor:</legend>
+
+          <div id="categorias" aria-hidden="true">
+            <span class="ativa">☀️</span><span>🌀</span><span>😐</span><span>⚽</span><span>🌎</span><span>🎵</span><span>🐾</span><span>🎨</span>
+          </div>
+
+          <ul id="lista-humores">
+            <li><label><input type="radio" name="humor" value="feliz" id="h-feliz" checked><span class="emoji">😊</span>feliz</label></li>
+            <li><label><input type="radio" name="humor" value="acanhada" id="h-acanhada"><span class="emoji">😳</span>acanhada</label></li>
+            <li><label><input type="radio" name="humor" value="apaixonada" id="h-apaixonada"><span class="emoji">❤️</span>apaixonada</label></li>
+            <li><label><input type="radio" name="humor" value="sonolenta" id="h-sonolenta"><span class="emoji">😴</span>com sono</label></li>
+            <li><label><input type="radio" name="humor" value="risonha" id="h-risonha"><span class="emoji">😄</span>risonha</label></li>
+            <li><label><input type="radio" name="humor" value="pulando" id="h-pulando"><span class="emoji">🎉</span>pulando de alegria</label></li>
+            <li><label><input type="radio" name="humor" value="triste" id="h-triste"><span class="emoji">😢</span>tristinha</label></li>
+            <li><label><input type="radio" name="humor" value="brava" id="h-brava"><span class="emoji">😠</span>brava</label></li>
+          </ul>
+
+          <label id="rotulo-comentario" for="comentario">Adicionar um comentário: <span>(opcional)</span></label>
+          <input type="text" id="comentario" name="comentario" maxlength="100" placeholder="ex.: hoje tem café ☕">
+          <small id="limite">máx. 100 caracteres</small>
+        </fieldset>
+
+        <div id="rodape-humor">
+          <button type="submit" class="botao">💾 Modifique seu humor</button>
+        </div>
+        </div>
+      </form>
+    </main>
+
+  </div>
+
+  <footer id="rodape" class="tela">
+    Orkut.clone - 2023 | Desenvolvido por Dayane Ferreira
+  </footer>
+
+</body>
+</html>
