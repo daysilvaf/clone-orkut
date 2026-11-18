@@ -1,0 +1,530 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #D4DDEE;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  color: #222;
+}
+
+a{
+  color: #0047BE;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+ul{
+  list-style: none;
+}
+
+/* Bloco central, um pouco mais largo que o login para caber 3 colunas */
+.tela{
+  width: calc(100% - 20px);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Caixa branca padrão */
+.caixa{
+  background-color: #FFFFFF;
+  border: 1px solid #C5D2EA;
+  border-radius: 6px;
+}
+
+/*! BARRA SUPERIOR ----------------------------*/
+#barra-topo{
+  background: linear-gradient(#A8C0E6, #8FAAD8);
+  border-bottom: 1px solid #7C97C6;
+}
+
+.barra-conteudo{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 34px;
+}
+
+#logo-topo{
+  display: flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 8px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+}
+
+#logo-topo img{
+  height: 18px;
+  width: auto;
+  display: block;
+}
+
+#menu-topo{
+  display: flex;
+  gap: 14px;
+  flex: 1;
+}
+
+#menu-topo a{
+  color: #FFFFFF;
+  font-size: 11px;
+}
+
+#busca-topo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#busca-topo input{
+  width: 160px;
+  height: 22px;
+  padding: 0 6px;
+  font: inherit;
+  font-size: 11px;
+  border: 1px solid #7C97C6;
+  border-radius: 3px;
+}
+
+#sair{
+  color: #FFFFFF;
+  font-size: 11px;
+}
+
+/*! PÁGINA (3 colunas) ----------------------------*/
+#pagina-perfil{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/*! COLUNA ESQUERDA ----------------------------*/
+#coluna-esquerda{
+  width: 150px;
+  flex-shrink: 0;
+  padding: 10px;
+}
+
+/* Foto genérica com as iniciais */
+#foto-perfil{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #F49AC1, #9B7FD6);
+  color: #FFFFFF;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#resumo-perfil{
+  margin-top: 8px;
+  font-size: 11px;
+}
+
+#resumo-perfil .nome-link{
+  font-weight: bold;
+}
+
+#resumo-perfil p{
+  margin-top: 2px;
+  color: #777;
+  line-height: 1.4;
+}
+
+#menu-perfil{
+  margin-top: 10px;
+  border-top: 1px solid #E1E8F5;
+}
+
+#menu-perfil a{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 4px;
+  border-bottom: 1px solid #E1E8F5;
+  font-size: 11px;
+}
+
+#menu-perfil a.ativo{
+  background-color: #E8EEFA;
+  font-weight: bold;
+}
+
+#menu-perfil .icone{
+  font-size: 12px;
+}
+
+/*! CENTRO ----------------------------*/
+#coluna-centro{
+  flex: 1;
+  min-width: 0;
+  padding: 12px 14px 14px;
+}
+
+#coluna-centro h1{
+  font-size: 20px;
+  font-weight: normal;
+  color: #222;
+}
+
+#frase-status{
+  margin-top: 2px;
+  font-size: 11px;
+  font-style: italic;
+  color: #777;
+}
+
+#contadores{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-top: 10px;
+}
+
+#contadores li{
+  display: flex;
+  flex-direction: column;
+}
+
+#contadores span{
+  font-size: 9px;
+  color: #777;
+}
+
+#contadores strong{
+  font-size: 11px;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+#contadores .notas{
+  letter-spacing: -2px;
+}
+
+/* Aba "social" */
+#aba-social{
+  margin-top: 12px;
+  border-bottom: 2px solid #A8C0E6;
+}
+
+#aba-social span{
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: #A8C0E6;
+  border-radius: 4px 4px 0 0;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+/* Tabela social: rótulo à direita, valor à esquerda */
+#tabela-social > div{
+  display: flex;
+  gap: 8px;
+  padding: 3px 6px;
+}
+
+#tabela-social > div:nth-child(odd){
+  background-color: #E8EEFA;
+}
+
+#tabela-social dt{
+  width: 150px;
+  flex-shrink: 0;
+  text-align: right;
+  color: #666;
+}
+
+#tabela-social dd{
+  flex: 1;
+  line-height: 1.4;
+}
+
+/*! COLUNA DIREITA ----------------------------*/
+#coluna-direita{
+  width: 240px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bloco-lateral{
+  padding: 10px;
+}
+
+.bloco-lateral h2{
+  font-size: 12px;
+  color: #222;
+}
+
+.bloco-lateral h2 span{
+  color: #0047BE;
+  font-weight: normal;
+}
+
+.grade{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 6px;
+  margin-top: 8px;
+}
+
+.grade li{
+  width: calc((100% - 12px) / 3);
+}
+
+.grade a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+/* Fotos genéricas: quadradinhos coloridos com iniciais ou símbolo */
+.mini{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1;
+  margin-bottom: 3px;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.c1{ background-color: #E78FB3; }
+.c2{ background-color: #7FA7DB; }
+.c3{ background-color: #C79A6B; }
+.c4{ background-color: #7CBF8E; }
+.c5{ background-color: #E9B44C; }
+.c6{ background-color: #8C82D1; }
+.c7{ background-color: #E3826F; }
+.c8{ background-color: #5FB3B3; }
+.c9{ background-color: #B58BC9; }
+
+.ver-todos{
+  display: block;
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid #E1E8F5;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/*! RODAPÉ ----------------------------*/
+footer#rodape{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  background-color: #BCCDE9;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 11px;
+  color: #3D4E70;
+}
+
+/*! TABLET: a coluna direita desce para baixo ----------------------------*/
+@media (max-width: 860px){
+  #pagina-perfil{
+    flex-wrap: wrap;
+  }
+
+  #coluna-direita{
+    width: 100%;
+    flex-direction: row;
+  }
+
+  #coluna-direita .bloco-lateral{
+    flex: 1;
+  }
+
+  .grade li{
+    width: calc((100% - 30px) / 6);
+  }
+}
+
+/*! CELULAR ----------------------------*/
+@media (max-width: 600px){
+  body{
+    font-size: 14px;
+  }
+
+  /* Barra: logo e Sair em cima, menu rolando embaixo */
+  .barra-conteudo{
+    flex-wrap: wrap;
+    height: auto;
+    gap: 8px 12px;
+    padding: 8px 0;
+  }
+
+  #busca-topo{
+    margin-left: auto;
+  }
+
+  #busca-topo input{
+    display: none;
+  }
+
+  #sair{
+    font-size: 13px;
+  }
+
+  #menu-topo{
+    order: 3;
+    flex-basis: 100%;
+    gap: 18px;
+    overflow-x: auto;
+  }
+
+  #menu-topo a{
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  #pagina-perfil{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .caixa{
+    border-radius: 8px;
+  }
+
+  /* Coluna esquerda vira um cartão: foto ao lado do nome, menu embaixo */
+  #coluna-esquerda{
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+  }
+
+  #foto-perfil{
+    width: 76px;
+    font-size: 26px;
+  }
+
+  #resumo-perfil{
+    flex: 1;
+    margin-top: 0;
+    font-size: 13px;
+  }
+
+  #resumo-perfil .nome-link{
+    font-size: 16px;
+  }
+
+  #menu-perfil{
+    flex-basis: 100%;
+    margin-top: 0;
+    border-top: none;
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+  }
+
+  #menu-perfil a{
+    padding: 7px 10px;
+    border: 1px solid #C5D2EA;
+    border-radius: 16px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  #coluna-centro{
+    padding: 14px;
+  }
+
+  /* O nome já aparece no cartão de cima */
+  #coluna-centro h1{
+    font-size: 18px;
+  }
+
+  #frase-status{
+    font-size: 13px;
+  }
+
+  #contadores{
+    gap: 8px 18px;
+  }
+
+  #contadores span{
+    font-size: 11px;
+  }
+
+  #contadores strong{
+    font-size: 13px;
+  }
+
+  #aba-social span{
+    font-size: 13px;
+    padding: 5px 12px;
+  }
+
+  /* Rótulo em cima do valor, mais fácil de ler na tela estreita */
+  #tabela-social > div{
+    flex-direction: column;
+    gap: 1px;
+    padding: 7px 8px;
+  }
+
+  #tabela-social dt{
+    width: auto;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  #coluna-direita{
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .bloco-lateral{
+    padding: 12px;
+  }
+
+  .bloco-lateral h2{
+    font-size: 14px;
+  }
+
+  .grade{
+    gap: 10px 8px;
+  }
+
+  .grade li{
+    width: calc((100% - 24px) / 4);
+  }
+
+  .grade a{
+    font-size: 11px;
+  }
+
+  .mini{
+    font-size: 20px;
+  }
+
+  .ver-todos{
+    font-size: 13px;
+    padding-top: 10px;
+  }
+}

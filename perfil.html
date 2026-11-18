@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dayane Ferreira - Orkut Clone</title>
+  <link rel="stylesheet" href="css/perfil.css">
+  <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <header id="barra-topo">
+    <div class="tela barra-conteudo">
+      <a href="perfil.html" id="logo-topo"><img src="img/orkut-logo.png" alt="logo orkut"></a>
+
+      <nav id="menu-topo">
+        <a href="#">Início</a>
+        <a href="#">Recados</a>
+        <a href="#">Amigos</a>
+        <a href="#">Comunidades</a>
+      </nav>
+
+      <div id="busca-topo">
+        <input type="search" placeholder="pesquisa do orkut" aria-label="pesquisa do orkut">
+        <a href="index.html" id="sair">Sair</a>
+      </div>
+    </div>
+  </header>
+
+  <div id="pagina-perfil" class="tela">
+
+    <!-- COLUNA ESQUERDA: foto e menu -->
+    <aside id="coluna-esquerda" class="caixa">
+      <div id="foto-perfil" aria-hidden="true">DF</div>
+
+      <div id="resumo-perfil">
+        <a href="#" class="nome-link">Dayane Ferreira</a>
+        <p>feminino, solteira<br>São Paulo, Brasil</p>
+      </div>
+
+      <ul id="menu-perfil">
+        <li><a href="#" class="ativo"><span class="icone">👤</span>perfil</a></li>
+        <li><a href="#"><span class="icone">📝</span>recados</a></li>
+        <li><a href="#"><span class="icone">📷</span>fotos</a></li>
+        <li><a href="#"><span class="icone">🎬</span>vídeos</a></li>
+        <li><a href="#"><span class="icone">⭐</span>depoimentos</a></li>
+      </ul>
+    </aside>
+
+    <!-- CENTRO: nome, contadores e tabela social -->
+    <main id="coluna-centro" class="caixa">
+      <h1>Dayane Ferreira</h1>
+      <p id="frase-status">"aprendendo flexbox e tomando café ☕"</p>
+
+      <ul id="contadores">
+        <li><span>recados</span><strong>📝 128</strong></li>
+        <li><span>fotos</span><strong>📷 42</strong></li>
+        <li><span>vídeos</span><strong>🎬 7</strong></li>
+        <li><span>fãs</span><strong>⭐ 23</strong></li>
+        <li><span>confiável</span><strong class="notas">😊😊😊</strong></li>
+        <li><span>legal</span><strong class="notas">🧊🧊🧊</strong></li>
+        <li><span>sexy</span><strong class="notas">💗💗</strong></li>
+      </ul>
+
+      <div id="aba-social"><span>social</span></div>
+
+      <dl id="tabela-social">
+        <div><dt>relacionamento:</dt><dd>solteira</dd></div>
+        <div><dt>aniversário:</dt><dd>12 de abril</dd></div>
+        <div><dt>interesses no orkut:</dt><dd>amigos, comunidades, trocar receitas</dd></div>
+        <div><dt>quem sou eu:</dt><dd>Desenvolvedora em formação, apaixonada por HTML e CSS. Nas horas vagas leio, cozinho e cuido das minhas plantas.</dd></div>
+        <div><dt>humor:</dt><dd>alegre e curiosa</dd></div>
+        <div><dt>estilo:</dt><dd>confortável</dd></div>
+        <div><dt>animais de estimação:</dt><dd>uma gata chamada Pipoca 🐱</dd></div>
+        <div><dt>cidade natal:</dt><dd><a href="#">São Paulo</a></dd></div>
+        <div><dt>paixões:</dt><dd><a href="#">programação</a>, <a href="#">viagens</a>, <a href="#">jardinagem</a></dd></div>
+        <div><dt>esportes:</dt><dd><a href="#">caminhada</a>, <a href="#">yoga</a></dd></div>
+        <div><dt>músicas:</dt><dd><a href="#">MPB</a>, <a href="#">pop anos 2000</a></dd></div>
+        <div><dt>filmes:</dt><dd><a href="#">animações</a>, <a href="#">comédias românticas</a></dd></div>
+        <div><dt>comidas:</dt><dd><a href="#">pão de queijo</a>, <a href="#">brigadeiro</a></dd></div>
+      </dl>
+    </main>
+
+    <!-- COLUNA DIREITA: amigos e comunidades -->
+    <aside id="coluna-direita">
+      <section class="caixa bloco-lateral">
+        <h2>amigos <span>(48)</span></h2>
+        <ul class="grade">
+          <li><a href="#"><span class="mini c1">AL</span>Ana Luiza (212)</a></li>
+          <li><a href="#"><span class="mini c2">BR</span>Bruno (98)</a></li>
+          <li><a href="#"><span class="mini c3">CA</span>Camila (305)</a></li>
+          <li><a href="#"><span class="mini c4">DI</span>Diego (147)</a></li>
+          <li><a href="#"><span class="mini c5">FE</span>Fernanda (260)</a></li>
+          <li><a href="#"><span class="mini c6">GU</span>Gustavo (73)</a></li>
+          <li><a href="#"><span class="mini c7">JU</span>Juliana (189)</a></li>
+          <li><a href="#"><span class="mini c8">MA</span>Marcos (120)</a></li>
+          <li><a href="#"><span class="mini c9">PA</span>Patrícia (231)</a></li>
+        </ul>
+        <a href="#" class="ver-todos">ver todos</a>
+      </section>
+
+      <section class="caixa bloco-lateral">
+        <h2>comunidades <span>(27)</span></h2>
+        <ul class="grade">
+          <li><a href="#"><span class="mini c3">☕</span>Eu amo café (5.402)</a></li>
+          <li><a href="#"><span class="mini c6">&lt;/&gt;</span>Aprendendo CSS (1.287)</a></li>
+          <li><a href="#"><span class="mini c1">🐱</span>Gatos são vida (9.815)</a></li>
+          <li><a href="#"><span class="mini c4">🌱</span>Plantas em casa (2.033)</a></li>
+          <li><a href="#"><span class="mini c8">📚</span>Leitura sem fim (3.640)</a></li>
+          <li><a href="#"><span class="mini c5">🧀</span>Pão de queijo (7.120)</a></li>
+        </ul>
+        <a href="#" class="ver-todos">ver todas</a>
+      </section>
+    </aside>
+
+  </div>
+
+  <footer id="rodape" class="tela">
+    Orkut.clone - 2023 | Desenvolvido por Dayane Ferreira
+  </footer>
+
+</body>
+</html>
