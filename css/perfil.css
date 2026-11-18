@@ -166,6 +166,39 @@ ul{
   font-size: 12px;
 }
 
+/* Seção Apps (link para o Bonequinho) */
+.titulo-apps{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.titulo-apps h2{
+  font-size: 12px;
+}
+
+.titulo-apps a{
+  font-size: 10px;
+}
+
+.lista-apps{
+  margin-top: 4px;
+}
+
+.lista-apps a{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px;
+  font-size: 11px;
+}
+
+.lista-apps a.ativo{
+  background-color: #E8EEFA;
+  font-weight: bold;
+}
+
 /*! CENTRO ----------------------------*/
 #coluna-centro{
   flex: 1;
@@ -443,6 +476,36 @@ footer#rodape{
   }
 
   #menu-perfil a{
+    padding: 7px 10px;
+    border: 1px solid #C5D2EA;
+    border-radius: 16px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  /* Apps vira uma linha de botões, como o menu */
+  .titulo-apps{
+    flex-basis: 100%;
+    margin-top: 0;
+  }
+
+  .titulo-apps h2{
+    font-size: 14px;
+  }
+
+  .titulo-apps a{
+    font-size: 12px;
+  }
+
+  .lista-apps{
+    flex-basis: 100%;
+    margin-top: -6px;
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+  }
+
+  .lista-apps a{
     padding: 7px 10px;
     border: 1px solid #C5D2EA;
     border-radius: 16px;
